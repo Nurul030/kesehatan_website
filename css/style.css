@@ -1,0 +1,214 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout Umum */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #e0f7fa;  /* Background hijau muda */
+    padding: 0 10px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background-color: #00796b;  /* Hijau tua */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* Navigasi */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+main {
+    text-align: center;
+    padding: 20px;
+    flex: 1;  /* Membuat main mengambil ruang lebih untuk memastikan footer tetap di bawah */
+}
+
+/* Menu Utama */
+.menu-container {
+    display: flex;
+    flex-wrap: wrap; /* Memungkinkan menu untuk wrap ke baris baru */
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu-item {
+    width: 45%; /* Setiap menu akan mengambil 45% dari lebar layar */
+    background-color: #b2dfdb; /* Biru-hijau muda */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: scale(1.05); /* Efek zoom saat hover */
+}
+
+.menu-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.menu-item p {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Responsif: Agar menu lebih lebar di layar kecil */
+@media (max-width: 768px) {
+    .menu-item {
+        width: 100%; /* Setiap menu akan mengambil lebar penuh pada layar kecil */
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #004d40; /* Biru hijau tua */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto; /* Menjaga footer tetap di bawah */
+    width: 100%;
+}
+
+footer p {
+    font-size: 1em;
+    margin: 0;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    margin-bottom: 5px;
+    font-size: 1.1em;
+    color: #00796b;
+}
+
+input, button {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+input {
+    width: 100%;
+}
+
+button {
+    background-color: #00796b; /* Hijau tua */
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #004d40;
+}
+
+/* Notifikasi sukses dan error */
+.notif-message {
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.notif-message.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.notif-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Formulir Tanya Jawab */
+form input[type="text"] {
+    width: 60%;
+    padding: 8px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+form button {
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Gaya untuk menampilkan jawaban tanya jawab */
+.jawaban {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f0f8ff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.jawaban h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.jawaban p {
+    font-size: 16px;
+}
+
+/* Gaya untuk video */
+.video-container {
+    max-width: 100%;  /* Membuat video responsif */
+    margin: 20px auto;
+    text-align: center;
+}
+
+.video-container iframe {
+    width: 100%;
+    max-width: 560px; /* Sesuaikan ukuran maksimum video */
+    height: 315px;
+}
